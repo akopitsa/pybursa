@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 from Coaches.models import Coach
+from address.models import Address
 
 
 class Course(models.Model):
@@ -17,6 +18,8 @@ class Course(models.Model):
     assistant = models.ForeignKey(Coach, related_name='+')
     data_start = models.DateField()
     data_finish = models.DateField()
+    venue = models.ForeignKey(Address, related_name='course_of')
+    description = models.CharField(max_length=255)
 
     def __str__(self):
         return self.name

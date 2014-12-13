@@ -36,7 +36,10 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #''
+    'coach',
+    'course',
+    'student',
+    'address',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -69,7 +72,7 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru'
 
 TIME_ZONE = 'UTC'
 
